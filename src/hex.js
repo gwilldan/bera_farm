@@ -1,0 +1,26 @@
+const hexVal =
+	"0x65bc52eb0000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000105cfee65fa14f3000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000008ca00000000000000000000000000e4aaf1351de4c0264c5c7056ef3777b41bd8e030000000000000000000000007507c1dc16935b82698e4c63f2746a2fcf994df80000000000000000000000000000000000000000000000000000000000000000";
+
+const hexToNumber = () => {
+	const dec = BigInt(`0x${hexVal}`);
+
+	console.log(dec);
+};
+
+const hexToString = () => {
+	let str = "";
+	for (let i = 0; i < hexVal.length; i += 2) {
+		const byte = hexVal.substring(i, i + 2);
+		str += String.fromCharCode(parseInt(byte, 16));
+	}
+	console.log(str);
+};
+
+const hexToAddress = () => {
+	const address = "0x" + hexVal.slice(-40);
+	console.log(address);
+};
+
+hexToNumber();
+hexToString();
+hexToAddress();

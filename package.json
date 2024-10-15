@@ -1,0 +1,29 @@
+{
+	"name": "bera_farm",
+	"version": "1.0.0",
+	"main": "index.js",
+	"scripts": {
+		"farm": "node src/farm",
+		"hex": "node src/hex",
+		"decodeBytes": "node src/decodeBytes",
+		"check": "node src/check",
+		"addLp": "node src/addLp",
+		"deploy": "node deploy",
+		"whitelist": "node src/vaultScripts/whitelist",
+		"withdraw": "node src/vaultScripts/withdraw"
+	},
+	"keywords": [],
+	"author": "defilova",
+	"license": "ISC",
+	"description": "",
+	"dependencies": {
+		"@openzeppelin/contracts": "^5.0.2",
+		"colors": "^1.4.0",
+		"commander": "^12.1.0",
+		"dotenv": "^16.4.5",
+		"ethers": "^6.13.2"
+	},
+	"devDependencies": {
+		"hardhat": "^2.22.12"
+	}
+}
